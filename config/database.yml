@@ -50,6 +50,7 @@ test:
 #
 production:
   <<: *default
-  database: cherry_rating_production
-  username: cherry_rating
+  database: <%= ENV['CHERRY_RATING_DATABASE'] %>
+  username: <%= ENV['CHERRY_RATING_DATABASE_USERNAME'] %>
   password: <%= ENV['CHERRY_RATING_DATABASE_PASSWORD'] %>
+  host: <%= ENV['CHERRY_RATING_DATABASE_HOST'] %>
