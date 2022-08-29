@@ -36,8 +36,7 @@ jobs:
       - run:
           name: rspec
           command: |
-            bundle exec rspec --format RspecJunitFormatter \
-                              --out test_results/rspec.xml \
+            bundle exec rspec --out test_results/rspec.xml \
                               --format documentation
       - run:
           name: Rubocop
