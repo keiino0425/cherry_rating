@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.7.5
+      - image: cimg/ruby:2.7.5
     working_directory: ~/cherry_rating
     steps:
       - checkout:
@@ -15,8 +15,8 @@ jobs:
 
   test:
     docker:
-      - image: circleci/ruby:2.7.5
-      - image: circleci/mysql:8.0
+      - image: cimg/ruby:2.7.5
+      - image: cimg/mysql:8.0
         environment:
           MYSQL_ROOT_PASSWORD: password
           MYSQL_DATABASE: cherry_rating_test
@@ -48,7 +48,7 @@ jobs:
 
   deploy:
     docker:
-      - image: circleci/ruby:2.7.5
+      - image: cimg/ruby:2.7.5
     steps:
       - checkout
       - setup_remote_docker:
