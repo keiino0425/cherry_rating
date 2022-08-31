@@ -53,5 +53,5 @@ production:
   <<: *default
   database: <%= ENV['CHERRY_RATING_DATABASE'] %>
   username: <%= ENV['CHERRY_RATING_DATABASE_USERNAME'] %>
-  password: <%= ENV['CHERRY_RATING_DATABASE_PASSWORD'] %>
+  password: <%= ENV['CHERRY_RATING_DATABASE_PASSWORD'] { 'password' } %>
   host: <%= ENV['CHERRY_RATING_DATABASE_HOST'] %>
