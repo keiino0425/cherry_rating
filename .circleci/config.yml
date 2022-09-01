@@ -40,7 +40,7 @@ jobs:
                               --format documentation
       - run:
           name: Rubocop
-          command: bundle exec rubocop
+          command: bundle exec rubocop -a
 
       - store_test_results:
           path: test_results
