@@ -75,5 +75,5 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
   Rails.application.configure do
     config.hosts << "cherry-rating.herokuapp.com"
-end
+  end
 end
