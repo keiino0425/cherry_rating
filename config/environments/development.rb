@@ -76,4 +76,5 @@ Rails.application.configure do
   Rails.application.configure do
     config.hosts << "cherry-rating.herokuapp.com"
   end
+  
 end
