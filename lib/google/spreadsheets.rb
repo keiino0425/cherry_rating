@@ -6,7 +6,7 @@ class Google
       @service = Google::Apis::SheetsV4::SheetsService.new
       @service.authorization = authorize
     end
-  
+
     # 認証
     def authorize
       json_key = JSON.generate(
@@ -25,7 +25,7 @@ class Google
     end
 
     # 指定されたスプレッドシートIDとレンジ（範囲）から値を取得
-    def get_values
+    def values
       @service.get_spreadsheet_values("1MDPFwFVab9_xnbPcMV2eMCd6PwVF_to6FMMytd54wwA", ["名簿!B:C"])
     end
   end
