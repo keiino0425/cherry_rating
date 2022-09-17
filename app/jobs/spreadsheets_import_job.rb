@@ -17,11 +17,11 @@ class SpreadsheetsImportJob < ApplicationJob
     :b_rule_first_place,
     :b_rule_second_place,
     :b_rule_third_place,
-    :b_rule_rating,
+    :b_rule_rating
   )
 
-  def perform(spreadsheet_id, range)    
-    res = google_spreadsheet_service.values("1MDPFwFVab9_xnbPcMV2eMCd6PwVF_to6FMMytd54wwA", ["データ読取用!A:O"])
+  def perform(spreadsheet_id, range)
+    res = google_spreadsheet_service.values(spreadsheet_id, range)
     return if res.values.empty? # 値が空だった場合はここで終了
 
     res.values.drop(1).each do |row_data| # 1行目はヘッダーなので削除
@@ -41,7 +41,7 @@ class SpreadsheetsImportJob < ApplicationJob
         :b_rule_first_place,
         :b_rule_second_place,
         :b_rule_third_place,
-        :b_rule_rating,
+        :b_rule_rating
       )
 
       # 重複するデータを作成したくないのでfind_or_initialize_byを使用
@@ -52,7 +52,7 @@ class SpreadsheetsImportJob < ApplicationJob
 
   private
 
-    def google_spreadsheet_service
-      @google_spreadsheet_service ||= Google::Spreadsheets.new
-    end
+  def google_spreadsheet_service
+    @google_spreadsheet_service ||= Google::Spreadsheets.new
+  end
 end
