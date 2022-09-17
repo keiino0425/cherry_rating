@@ -25,8 +25,8 @@ module Google
     end
 
     # 指定されたスプレッドシートIDとレンジ（範囲）から値を取得
-    def values
-      @service.get_spreadsheet_values("1MDPFwFVab9_xnbPcMV2eMCd6PwVF_to6FMMytd54wwA", ["名簿!B:C"])
+    def values(spreadsheet_id, ragne)
+      @service.get_spreadsheet_values(spreadsheet_id, ragne)
     end
   end
 end
