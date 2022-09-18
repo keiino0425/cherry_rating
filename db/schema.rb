@@ -10,5 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2022_09_17_181628) do
+
+  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "user_name"
+    t.string "password"
+    t.integer "chip"
+    t.integer "winning_streak"
+    t.integer "point"
+    t.integer "a_rule_game"
+    t.integer "a_rule_first_place"
+    t.integer "a_rule_second_place"
+    t.integer "a_rule_third_place"
+    t.integer "a_rule_rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "b_rule_game"
+    t.integer "b_rule_first_place"
+    t.integer "b_rule_second_place"
+    t.integer "b_rule_third_place"
+    t.integer "b_rule_rating"
+  end
+
 end
