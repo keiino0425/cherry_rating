@@ -1,2 +1,15 @@
 //= link_tree ../images
 //= link_directory ../stylesheets .css
+//= link application.css
+//= link css/animate.css
+//= link css/icomoon.css
+//= link css/bootstrap.css
+//= link css/style.css
+//= link js/modernizr-2.6.2.min.js
+//= link js/respond.min.js
+//= link js/jquery.min.js
+//= link js/jquery.easing.1.3.js
+//= link js/bootstrap.min.js
+//= link js/jquery.waypoints.min.js
+//= link js/simplyCountdown.js
+//= link js/main.js
