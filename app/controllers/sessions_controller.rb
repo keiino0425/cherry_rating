@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     else
       flash.now[:danger] = '名前かパスワードが正しくありません!'
       render 'new'
+    end
   end
 
   def destroy
