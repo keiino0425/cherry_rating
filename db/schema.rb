@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_17_181628) do
+ActiveRecord::Schema.define(version: 2022_09_30_122620) do
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "user_name"
-    t.string "password"
     t.integer "chip"
     t.integer "winning_streak"
     t.integer "point"
@@ -30,6 +29,7 @@ ActiveRecord::Schema.define(version: 2022_09_17_181628) do
     t.integer "b_rule_second_place"
     t.integer "b_rule_third_place"
     t.integer "b_rule_rating"
+    t.string "password_digest"
   end
 
 end
